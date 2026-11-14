@@ -1,0 +1,18 @@
+{
+  "name": "corporate-games-ai-gateway",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "One key-based API through which AI assistants organise and host Corporate Games. Independent of every game repo; reads them, never edits them.",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "generate": "node tools/generate.mjs",
+    "drift": "node tools/generate.mjs --check",
+    "test": "node --test --test-concurrency=1 test/*.test.mjs",
+    "test:static": "node --test --test-concurrency=1 test/static.test.mjs test/unit.test.mjs test/docs.test.mjs test/lifecycle-static.test.mjs test/handover-static.test.mjs",
+    "test:live-game": "node --test --test-concurrency=1 test/contract.test.mjs test/agent.test.mjs test/negative.test.mjs test/lifecycle.test.mjs test/gaps.test.mjs test/handover.test.mjs",
+    "dev": "node src/node-server.mjs"
+  }
+}

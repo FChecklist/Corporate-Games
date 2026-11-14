@@ -13,4 +13,4 @@ Software products of **IT Services by Rajat Agarwal**. Each product has its own 
 
 Related sites of IT Services by Rajat Agarwal: [itservices-site](https://github.com/FChecklist/itservices-site) (policies and payments), [startup-coach-site](https://github.com/FChecklist/startup-coach-site) (Startup Coach).
 
-This repository holds only this list. The code of each product lives in its own repository.
+This repository holds this list and one cross-product project: [`ai-gateway/`](ai-gateway/), the key-based API through which AI assistants organize or host Corporate Games (work in progress, not deployed; start at [`ai-gateway/docs/KNOWLEDGE/README.md`](ai-gateway/docs/KNOWLEDGE/README.md)). The code of each product lives in its own repository.

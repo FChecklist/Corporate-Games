@@ -1,0 +1,23 @@
+# Template. Nothing is pushed anywhere yet. When this project gets a remote, this runs the drift guard and every test on each change,
+# and daily, so a change in a game's code that the gateway has not absorbed shows up as a red run within a day.
+# The game repos should also trigger this workflow (repository_dispatch "game-changed") from their own CI: a decision for the owner.
+name: gateway
+on:
+  push:
+  pull_request:
+  schedule: [{ cron: "17 3 * * *" }]
+  repository_dispatch: { types: [game-changed] }
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with: { repository: OWNER/tambola, path: tambola, ref: LIVE_COMMIT_OR_MAIN }   # fill in: the game's repo and the commit that is live
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - uses: oven-sh/setup-bun@v2
+      - run: npm run drift
+        env: { CT_GAME_TAMBOLA: "${{ github.workspace }}/tambola" }
+      - run: npm test
+        env: { CT_GAME_TAMBOLA: "${{ github.workspace }}/tambola" }
