@@ -1,0 +1,9 @@
+{
+  "game": "tambola",
+  "path_note": "checkout used when generating",
+  "commit": "c6897f2",
+  "commit_date": "2026-11-13",
+  "subject": "edge: sign-in try is counted by a repeat unless the first attempt really counted it; 5th-try repeat not rejected by its own count",
+  "branch": "",
+  "uncommitted_changes": false
+}
