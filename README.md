@@ -14,3 +14,5 @@ Software products of **IT Services by Rajat Agarwal**. Each product has its own 
 Related sites of IT Services by Rajat Agarwal: [itservices-site](https://github.com/FChecklist/itservices-site) (policies and payments), [startup-coach-site](https://github.com/FChecklist/startup-coach-site) (Startup Coach).
 
 This repository holds only this list. The code of each product lives in its own repository.
+
+See [KNOWLEDGE-MAP.md](KNOWLEDGE-MAP.md) for what this repository is for and what the other repositories are for (updated 14 Nov 2026).
